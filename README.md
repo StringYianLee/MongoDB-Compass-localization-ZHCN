@@ -134,7 +134,7 @@ MongoDB-Compass-localization-ZHCN/
 ### 1. 源码运行
 
 ```bash
-git clone https://github.com/stringyianlee/MongoDB-Compass-localization-ZHCN.git
+git clone https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN.git
 cd MongoDB-Compass-localization-ZHCN
 
 python -m venv .venv

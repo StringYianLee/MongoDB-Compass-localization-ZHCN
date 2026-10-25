@@ -25,7 +25,7 @@
 - 下载校验（SHA256）可被绕过；
 - 任何凭据泄露风险。
 
-联系方式：通过 GitHub 账号 [@stringyianlee](https://github.com/stringyianlee) 提交私密安全报告（Security Advisory），或在仓库 Issue 中仅说明“存在安全问题，请提供私下联系方式”。
+联系方式：通过 GitHub 账号 [@StringYianLee](https://github.com/StringYianLee) 提交私密安全报告（Security Advisory），或在仓库 Issue 中仅说明“存在安全问题，请提供私下联系方式”。
 
 ## 支持范围
 

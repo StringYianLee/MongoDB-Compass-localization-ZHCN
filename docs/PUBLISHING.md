@@ -23,7 +23,7 @@ gh repo create MongoDB-Compass-localization-ZHCN --public --source . --remote or
 1. 在本机生成或使用已有密钥：
 
    ```bash
-   ssh-keygen -t ed25519 -C "stringyianlee@foxmail.com"
+   ssh-keygen -t ed25519 -C "StringYianLee@foxmail.com"
    ```
 
 2. 将 `~/.ssh/id_ed25519.pub` 的内容添加到 GitHub：
@@ -34,12 +34,15 @@ gh repo create MongoDB-Compass-localization-ZHCN --public --source . --remote or
 4. 推送：
 
    ```bash
-   git remote add origin git@github.com:stringyianlee/MongoDB-Compass-localization-ZHCN.git
+   git remote add origin ssh://git@ssh.github.com:443/StringYianLee/MongoDB-Compass-localization-ZHCN.git
    git push -u origin main
    ```
 
 > 本机若配置了 `url.https://gitclone.com/.insteadof=https://` 之类的镜像重写，
 > 推送时应绕过全局配置：`GIT_CONFIG_GLOBAL=/dev/null git push ...`，否则会推到只读镜像。
+>
+> 若 22 端口被网络封禁，可使用 GitHub 的 443 端口 SSH 端点：
+> `ssh://git@ssh.github.com:443/StringYianLee/MongoDB-Compass-localization-ZHCN.git`
 
 ## 方式三：受限网络（离线打包）
 
@@ -54,7 +57,7 @@ git bundle create MongoDB-Compass-localization-ZHCN.bundle --all
 ```bash
 git clone MongoDB-Compass-localization-ZHCN.bundle MongoDB-Compass-localization-ZHCN
 cd MongoDB-Compass-localization-ZHCN
-git remote set-url origin git@github.com:stringyianlee/MongoDB-Compass-localization-ZHCN.git
+git remote set-url origin ssh://git@ssh.github.com:443/StringYianLee/MongoDB-Compass-localization-ZHCN.git
 git push -u origin main
 ```
 
