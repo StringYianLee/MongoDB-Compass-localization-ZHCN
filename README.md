@@ -276,6 +276,8 @@ python CompassZhCn.py --root "D:\Compass"       # 指定非默认安装目录
 
 **请勿提交**：Compass 安装包、`app.asar`、备份文件、日志、系统字体、访问令牌或任何凭据。
 
+> Issues / Discussions / Sponsorships 的启用条件、配置步骤与运营方案见 [`docs/COMMUNITY-SETUP.md`](docs/COMMUNITY-SETUP.md)。
+
 ---
 
 ## 许可与免责声明
