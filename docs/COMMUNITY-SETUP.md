@@ -2,14 +2,16 @@
 
 本文针对仓库 `StringYianLee/MongoDB-Compass-localization-ZHCN`，给出三项社区功能的用途说明、适用场景、影响评估、前置条件、注意事项与**可逐项照做的设置步骤**。
 
-> 现状快照（2026-10-25）
+> 现状快照（2026-10-25 更新）
 >
 > | 功能 | 当前状态 | 说明 |
 > | --- | --- | --- |
-> | Issues | ✅ 已启用 | 尚无 Issue 模板、标签体系与分流规则 |
-> | Discussions | ✅ 已启用 | 已有默认 6 个分类，尚无欢迎帖与版规 |
-> | Sponsorships | ⚠️ 未就绪 | 账号未开通 GitHub Sponsors，仓库无 `FUNDING.yml`，无 Sponsor 按钮 |
+> | Issues | ✅ 已启用并完善 | 已添加 2 个 Issue 表单 + `config.yml`；新增 `needs-triage` / `i18n` / `compatibility` 标签 |
+> | Discussions | ✅ 已启用 | 已有 6 个默认分类；欢迎帖与分类描述待发布 |
+> | Sponsorships | ⚠️ 待账号开通 | `FUNDING.yml` 已添加；账号尚未开通 GitHub Sponsors，收款与按钮需完成账号级审核 |
 > | Projects / Wiki | ✅ 已启用 | 建议按需保留（Wiki 与 `docs/` 可能重复） |
+>
+> 已落地文件：`.github/ISSUE_TEMPLATE/{bug_report,feature_request,config}.yml`、`.github/FUNDING.yml`、`CODE_OF_CONDUCT.md`。
 
 ---
 

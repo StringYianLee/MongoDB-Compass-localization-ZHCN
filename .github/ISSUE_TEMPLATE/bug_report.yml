@@ -1,0 +1,99 @@
+name: 🐞 缺陷报告
+description: 汉化后界面异常、构建/安装失败或与新版 Compass 不兼容
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！提交前请先：
+        1. 阅读 [README](https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN#readme) 与 [常见问题](https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN/discussions/categories/q-a)；
+        2. 搜索是否已有相同 Issue；
+        3. **不要粘贴备份文件、完整用户路径、Token 等敏感信息**。
+
+  - type: input
+    id: compass_version
+    attributes:
+      label: MongoDB Compass 版本
+      description: 帮助 → About，或在安装目录查看 `app-<版本>`
+      placeholder: "1.53.1"
+    validations:
+      required: true
+
+  - type: input
+    id: tool_version
+    attributes:
+      label: 汉化工具版本与形态
+      description: MSI 安装版 / 单文件 exe / Web 版 / 源码运行
+      placeholder: "2.0.0（MSI）"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - 其他（请在补充说明中注明）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install_type
+    attributes:
+      label: Compass 安装方式
+      options:
+        - 官方 Squirrel 安装版（%LOCALAPPDATA%\MongoDBCompass）
+        - 自定义目录安装
+        - 便携版 / 其他（不受支持，仅作参考）
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请写出从启动工具到出现问题的完整步骤
+      placeholder: |
+        1. 完全退出 Compass
+        2. 打开汉化工具，点击「一键汉化」
+        3. 重启 Compass，打开「聚合」页面
+        4. 出现……
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: 期望结果与实际结果
+      placeholder: |
+        期望：显示中文「聚合管道」
+        实际：显示英文「Aggregation Pipeline」
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志片段（可选）
+      description: 日志位于 `%LOCALAPPDATA%\CompassZhCn\logs\tool-YYYYMMDD.log`，请只粘贴相关片段
+      placeholder: "粘贴 10–30 行相关日志即可，勿上传整个文件"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图或录屏（可选）
+      description: 可直接拖拽图片到此处
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 自查确认
+      options:
+        - label: 我已尝试「一键还原」，确认问题仅与汉化相关（或还原后仍存在）
+        - label: 我已搜索现有 Issue 与 Discussions，未找到相同问题
+          required: true
+        - label: 我确认内容中不包含备份文件、完整路径、Token 等敏感信息
+          required: true

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🙏 使用问答（安装 / 兼容性 / 报错排查）
+    url: https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN/discussions/categories/q-a
+    about: 使用类问题请先在 Discussions 提问，便于沉淀可检索的答案
+  - name: 💡 想法与取舍讨论
+    url: https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN/discussions/categories/ideas
+    about: 开放式建议、方案比较与投票
+  - name: 📦 下载与更新
+    url: https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN/releases
+    about: 获取最新安装包、校验值与版本说明
+  - name: 📖 文档与构建说明
+    url: https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN#readme
+    about: 安装、构建、命令行用法与目录结构
