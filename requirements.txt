@@ -1,0 +1,6 @@
+# Flet 图形界面（v2.0.0 起默认）
+flet==1.0.5
+flet-desktop==1.0.5
+
+# 打包桌面 exe 时需要
+# pip install pyinstaller
