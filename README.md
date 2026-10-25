@@ -288,6 +288,7 @@ python CompassZhCn.py --root "D:\Compass"       # 指定非默认安装目录
 - **MongoDB**、**MongoDB Compass** 及相关标识是 MongoDB, Inc. 的商标，仅用于说明本工具的适用对象；
 - 本项目**不包含** MongoDB Compass 的任何二进制、源代码或安装包，仅在用户本机对其安装目录做可逆的本地化修改；
 - 仓库不包含微软雅黑字体，Web 版构建时由脚本从本机系统字体提取；
+- 第三方商标与资源的说明见 [NOTICE.md](NOTICE.md)；
 - 使用本工具造成的任何问题（包括但不限于 Compass 无法启动、升级失败）由使用者自行承担，建议操作前确认备份存在。
 
 ---
