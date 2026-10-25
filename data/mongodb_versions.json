@@ -1,0 +1,229 @@
+{
+  "schema": 1,
+  "fetched_at": "2026-10-24",
+  "source": {
+    "release_notes": "https://www.mongodb.com/docs/manual/release-notes/",
+    "lifecycle": "https://www.mongodb.com/support-policy/lifecycles",
+    "versions": "https://www.mongodb.com/docs/mongodb-versions/"
+  },
+  "current": "9.0",
+  "previous": "8.3",
+  "latest_patch": "9.0.4",
+  "latest_patch_date": "2026-10-13",
+  "coverage": "9.0（当前稳定）、8.3、8.0、7.0（前序稳定）。6.0（2025-07 EOL）与 5.0（2024-10 EOL）不再展开。",
+  "update_method": "软件内置官方 Release Notes 快照（2026-10-24）。点击“刷新数据”会联网读取官方版本索引与各系列 Release Notes，更新当前稳定版与最新补丁号，并缓存到 %LOCALAPPDATA%\\CompassZhCn\\mongodb-versions.json；离线时自动使用缓存或内置快照。特性对比为人工整理，随软件版本更新。",
+  "versions": [
+    {
+      "series": "9.0",
+      "latest": "9.0.4",
+      "latest_date": "2026-10-13",
+      "ga": "2026-09-28",
+      "eol": "2031-10-31",
+      "status": "当前稳定版",
+      "status_key": "current",
+      "tagline": "2026-09 发布；强化查询资源治理、可查询加密与时序存储",
+      "highlights": [
+        "每操作内存上限（默认 1 GB 或可用内存 20%）",
+        "Query Settings 可作为命令字段，按 query shape 生效",
+        "$queryStats 默认 1% 采样并覆盖写操作",
+        "可查询加密前后缀/子串查询 GA",
+        "时序集合改为单一命名空间存储"
+      ],
+      "fit": "新项目；需要查询资源治理、QE 子串查询或时序集合改造的部署"
+    },
+    {
+      "series": "8.3",
+      "latest": "8.3.13",
+      "latest_date": "2026-10-13",
+      "ga": "2026-05-04",
+      "eol": "2029-10-31",
+      "status": "前序稳定版",
+      "status_key": "previous",
+      "tagline": "2026-05 发布；成本模型优化器与聚合能力增强",
+      "highlights": [
+        "Cost-Based Ranker（CBR）成为默认计划选择机制",
+        "$scoreFusion 搜索排序融合 GA",
+        "新增 $hash/$hexHash、$serializeEJSON 等表达式",
+        "整体吞吐与尾延迟最高改善 40%",
+        "removeShard 拆分为 4 个可恢复命令"
+      ],
+      "fit": "留在 8.x 系列、优先获得性能与查询优化器改进的部署"
+    },
+    {
+      "series": "8.0",
+      "latest": "8.0.34",
+      "latest_date": "2026-10-13",
+      "ga": "2024-10-02",
+      "eol": "2029-10-31",
+      "status": "长期支持 Major",
+      "status_key": "lts",
+      "tagline": "2024-10 发布；性能、分片与时序分析大幅增强",
+      "highlights": [
+        "读取吞吐最高提升 36%，跨集合 bulkWrite 快 56%",
+        "moveCollection / unshardCollection / Config Shards",
+        "事务内可对分片集合使用 $lookup",
+        "Queryable Encryption 范围查询",
+        "时序 Block Processing，分析查询提升 200%+"
+      ],
+      "fit": "生态与驱动兼容性成熟，适合作为存量系统的主力 Major"
+    },
+    {
+      "series": "7.0",
+      "latest": "7.0.45",
+      "latest_date": "2026-10-13",
+      "ga": "2023-08-15",
+      "eol": "2027-08-31",
+      "status": "维护期（2027-08 EOL）",
+      "status_key": "maintenance",
+      "tagline": "2023-08 发布；查询、分片与安全能力完善",
+      "highlights": [
+        "$median / $percentile 聚合操作符",
+        "复合通配符索引",
+        "Queryable Encryption 等值查询 GA",
+        "OIDC 认证与 KMIP 1.0/1.1",
+        "AutoMerger 自动合并 chunk"
+      ],
+      "fit": "存量系统；建议在 EOL 前规划升级到 8.0 或 9.0"
+    }
+  ],
+  "comparison": {
+    "columns": [
+      {
+        "series": "9.0",
+        "label": "9.0（当前）"
+      },
+      {
+        "series": "8.3",
+        "label": "8.3（前序）"
+      },
+      {
+        "series": "8.0",
+        "label": "8.0（LTS）"
+      },
+      {
+        "series": "7.0",
+        "label": "7.0（维护）"
+      }
+    ],
+    "rows": [
+      {
+        "feature": "版本定位",
+        "values": {
+          "9.0": "Major；2026-09 GA",
+          "8.3": "Minor；2026-05 GA",
+          "8.0": "Major；2024-10 GA",
+          "7.0": "Major；2023-08 GA"
+        }
+      },
+      {
+        "feature": "查询与聚合",
+        "values": {
+          "9.0": "内存上限；命令级 Query Settings",
+          "8.3": "CBR 默认；$scoreFusion GA",
+          "8.0": "$rank 空值；binData 转换",
+          "7.0": "$median/$percentile；大事件拆分"
+        }
+      },
+      {
+        "feature": "性能与执行",
+        "values": {
+          "9.0": "事务并发 1 万；BSON 校验",
+          "8.3": "吞吐/延迟最高 +40%",
+          "8.0": "读吞吐 +36%；跨集合 bulkWrite",
+          "7.0": "动态 tickets；SBE 扩展"
+        }
+      },
+      {
+        "feature": "分片与集群",
+        "values": {
+          "9.0": "元数据检查；shard draining API",
+          "8.3": "removeShard 拆分为 4 命令",
+          "8.0": "move/unshardCollection",
+          "7.0": "AutoMerger；元数据检查"
+        }
+      },
+      {
+        "feature": "安全与加密",
+        "values": {
+          "9.0": "QE 子串查询 GA；弃用 mongocryptd",
+          "8.3": "SCRAM-SHA-1 / FIPS 互斥",
+          "8.0": "QE 范围查询；OCSF 审计",
+          "7.0": "QE 等值 GA；OIDC；KMIP"
+        }
+      },
+      {
+        "feature": "时序数据",
+        "values": {
+          "9.0": "单一命名空间；可重命名",
+          "8.3": "分片键规则收紧",
+          "8.0": "Block Processing；+200%",
+          "7.0": "放宽 delete 限制"
+        }
+      },
+      {
+        "feature": "可观测性",
+        "values": {
+          "9.0": "内存/change stream 指标",
+          "8.3": "CBR/慢查询/内存指标",
+          "8.0": "Profiler 按 workingMillis",
+          "7.0": "currentOp 采样；planCache"
+        }
+      },
+      {
+        "feature": "搜索与向量",
+        "values": {
+          "9.0": "发布说明未列新特性",
+          "8.3": "$scoreFusion GA",
+          "8.0": "$vectorSearch 修复",
+          "7.0": "Atlas Search 索引管理"
+        }
+      },
+      {
+        "feature": "升级提示",
+        "values": {
+          "9.0": "FCV 9.0；时序集合 >5000",
+          "8.3": "仅相邻单版本降级",
+          "8.0": "注意内核 6.19–7.0.13",
+          "7.0": "QE 预览不兼容；openssl"
+        }
+      }
+    ]
+  },
+  "latest_changes": [
+    {
+      "title": "查询资源治理",
+      "detail": "新增每操作内存上限（默认 1 GB 或服务器可用内存的 20%，取较大者），explain 增加 expressionEvaluationPeakMemoryBytes。"
+    },
+    {
+      "title": "命令级查询设置",
+      "detail": "querySettings 可直接作为 find、aggregate、distinct 的命令字段，仅对本次执行生效；支持按 query shape 设置 maxTimeMS 与内部参数。"
+    },
+    {
+      "title": "查询统计",
+      "detail": "$queryStats 默认按 1% 采样，新增 insert/update/delete 统计以及 cursor、planner、writes 指标。"
+    },
+    {
+      "title": "服务端 JavaScript",
+      "detail": "$function、$accumulator、$where 基于 WASM 引擎重新启用（8.0 曾弃用）；ppc64le 架构不可用。"
+    },
+    {
+      "title": "可查询加密",
+      "detail": "加密字符串的前缀、后缀、子串查询正式 GA；mongocryptd 弃用，改用 Automatic Encryption Shared Library。"
+    },
+    {
+      "title": "时序集合",
+      "detail": "改为单一命名空间存储并支持 renameCollection；单库超过 5000 个时序集合时升级耗时与写入延迟会明显增加。"
+    },
+    {
+      "title": "并发与校验",
+      "detail": "新增 maxConcurrentMultiDocumentTransactions（默认 10000）；BSON 默认校验；文档校验新增 constraint 级别。"
+    }
+  ],
+  "upgrade_advice": "9.0 是 2026-09 发布的当前 Major，支持至 2031-10-31。新项目优先选择 9.0；8.x 存量可先评估 8.3 的性能收益，再按官方路径升级到 9.0；7.0 已进入维护期（2027-08 EOL），建议尽快规划升级。升级前请阅读对应版本的 Compatibility Changes，并在测试环境验证驱动、索引与时序集合。",
+  "notes": [
+    "版本号与发布日期来自 MongoDB 官方 Release Notes 与 Lifecycle Schedules，抓取日期 2026-10-24。",
+    "特性对比为官方发布说明的摘要，未覆盖全部补丁级修复；具体行为以对应版本文档为准。",
+    "9.0 起 Minor Release 仅通过 Atlas Core Auto Upgrade 提供，自管理部署可选择年度 Feature Update（x.5）版本。",
+    "6.0、5.0 已结束支持（EOL），不再接收安全修复，不纳入本次对比。"
+  ]
+}
