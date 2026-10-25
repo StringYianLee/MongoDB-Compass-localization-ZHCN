@@ -131,6 +131,14 @@ MongoDB-Compass-localization-ZHCN/
 
 ## 安装与构建
 
+### 0. 直接下载安装包
+
+前往 **[Releases](https://github.com/StringYianLee/MongoDB-Compass-localization-ZHCN/releases)** 下载最新版本：
+
+| 版本 | 安装包 | 大小 | SHA256 |
+| --- | --- | ---: | --- |
+| v2.0.0 | `CompassZhCn-2.0.0-x64.msi` | 88,043,520 B | `77b19615f011c7057d3db204363f0b3ffcdf66022fdc86aac88777fdbcda68c6` |
+
 ### 1. 源码运行
 
 ```bash
