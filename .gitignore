@@ -1,0 +1,42 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.fletvenv/
+build/
+*.spec
+
+# ---- 发布产物（二进制不进仓库）----
+dist/
+dist_flet/
+*.msi
+*.wixpdb
+*.exe
+
+# ---- 本地工具与状态 ----
+.workbuddy/
+_work/
+ui.json
+state.json
+*.log
+
+# ---- 生成文件（含本机绝对路径）----
+installer/Product.wxs
+
+# ---- 第三方资源 / 字体（不得再分发）----
+assets/fonts/
+
+# ---- 操作系统 ----
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---- 凭据 ----
+.env
+.env.*
+*.pem
+id_rsa*
+
+# ---- Flet 本地缓存 ----
+.flet/
