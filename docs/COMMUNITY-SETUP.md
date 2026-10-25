@@ -207,6 +207,19 @@
 | 8 | README 增加 Discussions / Sponsor 入口 | README.md | 5 分钟 |
 | 9 | 用 `gh api` 验证三项开关 | 终端 | 1 分钟 |
 
+### 已完成的验证（2026-10-25）
+
+| 项目 | 结果 |
+| --- | --- |
+| Issues 开关 | `has_issues: true`（API PATCH 幂等确认） |
+| Discussions 开关 | `has_discussions: true`（API PATCH 幂等确认） |
+| Issue 模板 | `bug_report.yml` / `feature_request.yml` / `config.yml` 已被 GitHub 识别；New issue 页显示两个表单与四个联系入口 |
+| 空白 Issue | 仅维护者可创建（`blank_issues_enabled: false` 生效） |
+| 标签 | 已新增 `needs-triage` / `i18n` / `compatibility`，共 13 个 |
+| 行为准则 | `CODE_OF_CONDUCT.md` 已被社区档案识别（显示为 Other，属自定义文本的正常表现） |
+| 许可证 | `LICENSE` 精简为标准 MIT 后，GitHub 识别为 **MIT License**；第三方说明移至 `NOTICE.md` |
+| 资助链接 | `.github/FUNDING.yml` 已存在且格式正确；`fundingLinks` 为空，因账号尚未开通 GitHub Sponsors（开通并勾选仓库 Sponsorships 后自动出现 Sponsor 按钮） |
+
 ### 验证命令
 
 ```bash
